@@ -1,0 +1,37 @@
+package com.stackroute.unittest.pe1;
+
+import java.util.*;
+public class AcceptSortQ7{
+
+    public static void main(String[] args) {
+       // acceptSort();
+       System.out.println(acceptSort("54637365"));
+    }
+
+    public static String acceptSort(String number){
+
+        //System.out.println("Enter a Input");
+        //String number;
+        String str2="";
+        //Scanner sc = new Scanner(System.in);
+        //number = sc.next();
+        //System.out.println("The given Number is \n "+number);
+        char tempArray[] = number.toCharArray();  // convert input string to char array
+        Arrays.sort(tempArray);  // sort tempArray
+        //System.out.println(tempArray);
+
+
+        //To loop through the given input string and reverse
+        for (int i=tempArray.length-1; i>=0; i--)
+        {
+            //Appending the characters to Reverse_String
+            str2 += tempArray[i];
+        }
+        //System.out.println("The number in Descending order is \n"+ str2);
+        return str2;
+    }
+
+
+
+
+}
