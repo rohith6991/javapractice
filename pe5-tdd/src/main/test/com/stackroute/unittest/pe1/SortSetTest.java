@@ -23,7 +23,7 @@ public class SortSetTest {
     }
 
     @Test
-    public void sort_set() {
+    public void sortSet() {
         HashSet<String> set=new HashSet<String>();
         set.add("Alice");
         set.add("Bluto");
@@ -37,7 +37,7 @@ public class SortSetTest {
     }
 
     @Test
-    public void sort_set1() {
+    public void sortSet1() {
         HashSet<String> set=new HashSet<String>();
         set.add("Harry");
         set.add("Olive");
@@ -51,7 +51,7 @@ public class SortSetTest {
         assertEquals("sorting failed",arr,obj.sort_set(set));
     }
     @Test
-    public void sort_set2() {
+    public void sortSet2() {
         HashSet<String> set=new HashSet<String>();
         set.add("Alice");
 
@@ -62,11 +62,26 @@ public class SortSetTest {
         assertEquals("single element sort failed",arr,obj.sort_set(set));
     }
     @Test
-    public void sort_set3() {
+    public void sortSet3() {
         HashSet<String> set=new HashSet<String>();
 
         ArrayList<String> arr=new ArrayList<String>();
 
         assertEquals("input array null case failed",arr,obj.sort_set(set));
+    }
+
+    @Test
+    public void sortFailure() {
+        HashSet<String> set=new HashSet<String>();
+        set.add("Harry");
+        set.add("Olive");
+        set.add("Alice");
+        set.add("Carner");
+        set.add("Bluto");
+
+
+        ArrayList<String> arr=new ArrayList<String>(Arrays.asList(new String[]{"Alice", "Bluto", "Carner","Harry","null"}));
+
+        assertNotEquals("sorting failed",arr,obj.sort_set(set));
     }
 }

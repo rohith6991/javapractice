@@ -10,6 +10,8 @@ import static org.junit.Assert.*;
 
 public class StringCountTest {
     StringCount obj;
+
+
     @Before
     public void setUp() throws Exception {
         obj=new StringCount();
@@ -51,6 +53,18 @@ public class StringCountTest {
         map.put("three",3);
 
         assertEquals("counting strings failed",map,obj.no_of_count(str));
+
+    }
+
+    @Test
+    public void countFailure() {
+        String str="one two three one two three one two three";
+        HashMap<String, Integer> map = new HashMap<String, Integer>();
+        map.put("one",3);
+        map.put("two",3);
+        map.put("three",30);
+
+        assertNotEquals("counting strings failed",map,obj.no_of_count(str));
 
     }
 

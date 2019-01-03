@@ -6,10 +6,18 @@ import static org.junit.Assert.*;
 
 public class UpdateArrayTest {
     UpdateArray obj;
-
+    ArrayList<String> list=new ArrayList<String >();
+    
     @org.junit.Before
     public void setUp() throws Exception {
         obj=new UpdateArray();
+
+        //ArrayList<String> list=new ArrayList<String >();
+        list.add("Apple");
+        list.add("Grape");
+        list.add("Melon");
+        list.add("Berry");
+        list.add("orange");
     }
 
     @org.junit.After
@@ -19,12 +27,7 @@ public class UpdateArrayTest {
 
     @org.junit.Test
     public void update() {
-        ArrayList<String> list=new ArrayList<String >();
-        list.add("Apple");
-        list.add("Grape");
-        list.add("Melon");
-        list.add("Berry");
-        list.add("orange");
+
         ArrayList<String>list1=new ArrayList<String>();
         list1.add("Apple");
         list1.add("Grape");
@@ -39,12 +42,7 @@ public class UpdateArrayTest {
     }
     @org.junit.Test
     public void update1() {
-        ArrayList<String> list=new ArrayList<String >();
-        list.add("Apple");
-        list.add("Grape");
-        list.add("Melon");
-        list.add("Berry");
-        list.add("orange");
+
         ArrayList<String>list1=new ArrayList<String>();
         list1.add("Apple");
         list1.add("Grape");
@@ -57,12 +55,7 @@ public class UpdateArrayTest {
     }
     @org.junit.Test
     public void update2() {
-        ArrayList<String> list=new ArrayList<String >();
-        list.add("Apple");
-        list.add("Grape");
-        list.add("Melon");
-        list.add("Berry");
-        list.add("orange");
+
         ArrayList<String>list1=new ArrayList<String>();
         list1.add("kiwi");
         list1.add("Grape");
@@ -79,12 +72,6 @@ public class UpdateArrayTest {
     @org.junit.Test
     public void remove() {
 
-        ArrayList<String> list=new ArrayList<String >();
-        list.add("Apple");
-        list.add("Grape");
-        list.add("Melon");
-        list.add("Berry");
-        list.add("orange");
         ArrayList<String>list1=new ArrayList<String >();
         assertEquals("removing elements from list failed",list1,obj.remove(list));
 
