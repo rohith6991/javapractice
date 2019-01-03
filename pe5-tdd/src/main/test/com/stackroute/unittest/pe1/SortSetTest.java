@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 
 import static org.junit.Assert.*;
@@ -30,66 +31,42 @@ public class SortSetTest {
         set.add("Harry");
         set.add("Olive");
 
-        ArrayList<String> arr=new ArrayList<String>();
-        arr.add("Alice");
-        arr.add("Bluto");
-        arr.add("Eugene");
-        arr.add("Harry");
-        arr.add("Olive");
-        assertEquals("Error",arr,obj.sort_set(set));
+        ArrayList<String> arr=new ArrayList<String>(Arrays.asList(new String[]{"Alice", "Bluto", "Eugene","Harry","Olive"}));
+//        arr.add("Alice");
+        assertEquals("sorting failed",arr,obj.sort_set(set));
     }
 
     @Test
     public void sort_set1() {
         HashSet<String> set=new HashSet<String>();
+        set.add("Harry");
+        set.add("Olive");
         set.add("Alice");
         set.add("Carner");
         set.add("Bluto");
-        set.add("Harry");
-        set.add("Olive");
+
+
+        ArrayList<String> arr=new ArrayList<String>(Arrays.asList(new String[]{"Alice", "Bluto", "Carner","Harry","Olive"}));
+
+        assertEquals("sorting failed",arr,obj.sort_set(set));
+    }
+    @Test
+    public void sort_set2() {
+        HashSet<String> set=new HashSet<String>();
+        set.add("Alice");
+
 
         ArrayList<String> arr=new ArrayList<String>();
         arr.add("Alice");
-        arr.add("Bluto");
-        arr.add("Carner");
-        arr.add("Harry");
-        arr.add("Olive");
-        assertEquals("Error",arr,obj.sort_set(set));
+
+        assertEquals("single element sort failed",arr,obj.sort_set(set));
     }
     @Test
     public void sort_set3() {
         HashSet<String> set=new HashSet<String>();
-        set.add("Alice");
-        set.add("Carner");
-        set.add("Bluto");
-        set.add("Harry");
-        set.add("Olive");
-        set.add("Keshav");
-        set.add("Kumar");
 
         ArrayList<String> arr=new ArrayList<String>();
-        arr.add("Alice");
-        arr.add("Bluto");
-        arr.add("Carner");
-        arr.add("Harry");
-        arr.add("Keshav");
-        arr.add("Kumar");
-        arr.add("Olive");
-        assertEquals("Error",arr,obj.sort_set(set));
+
+        assertEquals("input array null case failed",arr,obj.sort_set(set));
     }
-    @Test
-    public void sort_setFailure() {
-        HashSet<String> set=new HashSet<String>();
-        set.add("Alice");
-        set.add("Carner");
-        set.add("Bluto");
-        set.add("Harry");
-        set.add("Olive");
-        set.add("Keshav");
-        set.add("Kumar");
-
-        assertNotNull("Error",obj.sort_set(set));
-
-    }
-
 }

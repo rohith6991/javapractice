@@ -1,3 +1,9 @@
+/*
+2. Write a program to find the number of counts in the following String . Store the output in
+Map< String ,Integer> as key value pair.
+ */
+
+
 package com.stackroute.unittest.pe1;
 
 import java.util.HashMap;
@@ -6,7 +12,7 @@ public class StringCount {
     public HashMap<String, Integer>no_of_count(String str ) {
         String result = str.replaceAll("[-+.^:,@___<>*?_]", " ");
         HashMap<String, Integer> map = new HashMap<String, Integer>();
-        String []str1=result.split("[\\s]");
+        String[] str1=result.split("[\\s]");
         for(int i=0;i<str1.length;i++)
         {
 

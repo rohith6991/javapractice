@@ -31,7 +31,9 @@ public class UpdateArrayTest {
         list1.add("kiwi");
         list1.add("Berry");
         list1.add("orange");
-        assertEquals("Error",list1,obj.update(list,2,"kiwi"));
+        assertEquals("updating list failed",list1,obj.update(list,2,"kiwi"));
+
+
 
 
     }
@@ -49,7 +51,7 @@ public class UpdateArrayTest {
         list1.add("Melon");
         list1.add("kiwi");
         list1.add("orange");
-        assertEquals("Error",list1,obj.update(list,3,"kiwi"));
+        assertEquals("updating list failed",list1,obj.update(list,3,"kiwi"));
 
 
     }
@@ -67,23 +69,12 @@ public class UpdateArrayTest {
         list1.add("Melon");
         list1.add("Berry");
         list1.add("orange");
-        assertEquals("Error",list1,obj.update(list,0,"kiwi"));
+        assertEquals("updating list failed",list1,obj.update(list,0,"kiwi"));
 
 
     }
-    @org.junit.Test
-    public void updateFailure() {
-        ArrayList<String> list=new ArrayList<String >();
-        list.add("Apple");
-        list.add("Grape");
-        list.add("Melon");
-        list.add("Berry");
-        list.add("orange");
-
-        assertNotNull("Error",obj.update(list,0,"kiwi"));
 
 
-    }
 
     @org.junit.Test
     public void remove() {
@@ -95,7 +86,7 @@ public class UpdateArrayTest {
         list.add("Berry");
         list.add("orange");
         ArrayList<String>list1=new ArrayList<String >();
-        assertEquals("Error",list1,obj.remove(list));
+        assertEquals("removing elements from list failed",list1,obj.remove(list));
 
     }
 

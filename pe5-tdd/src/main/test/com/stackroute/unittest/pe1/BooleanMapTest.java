@@ -28,7 +28,7 @@ public class BooleanMapTest {
         map.put("b",false);
         map.put("c",true);
         map.put("d",false);
-        assertEquals("Error",map,obj.arr_map(arr));
+        assertEquals("incorrect mapping",map,obj.arr_map(arr));
     }
     @Test
     public void arr_map1() {
@@ -39,7 +39,7 @@ public class BooleanMapTest {
         map.put("c",true);
         map.put("d",false);
         map.put("e",false);
-        assertEquals("Error",map,obj.arr_map(arr));
+        assertEquals("incorrect mapping",map,obj.arr_map(arr));
     }
     @Test
     public void arr_map2() {
@@ -49,11 +49,11 @@ public class BooleanMapTest {
         map.put("b",true);
         map.put("c",false);
 
-        assertEquals("Error",map,obj.arr_map(arr));
+        assertEquals("incorrect mapping",map,obj.arr_map(arr));
     }
     @Test
     public void arr_mapFailure() {
         String  arr[] = {"a","a","a","b","b","b","b","b","c"};
-        assertNotNull("Error",obj.arr_map(arr));
+        assertNotNull(obj.arr_map(arr));
     }
 }

@@ -30,26 +30,26 @@ public class MapObjectTest {
         res.put("val1"," ");
         res.put("val2","java");
 
-        assertEquals("Error",res,obj.modify(hm));
+        assertEquals("modify failed",res,obj.modify(hm));
     }
     @Test
     public void modify1() {
         LinkedHashMap<String ,String> hm=new LinkedHashMap<String, String>();
-        hm.put("val1","keshav");
-        hm.put("val2","kumar");
+        hm.put("val1","abc");
+        hm.put("val2","xyz");
         HashMap<String ,String>res=new HashMap<String, String>();
         res.put("val1"," ");
-        res.put("val2","keshav");
+        res.put("val2","abc");
 
-        assertEquals("Error",res,obj.modify(hm));
+        assertEquals("modify failed",res,obj.modify(hm));
     }
     @Test
     public void modifyFailure() {
         LinkedHashMap<String ,String> hm=new LinkedHashMap<String, String>();
-        hm.put("val1","keshav");
-        hm.put("val2","kumar");
+        hm.put("val1","apple");
+        hm.put("val2","carrots");
 
 
-        assertNotNull("Error",obj.modify(hm));
+        assertNotNull("Null",obj.modify(hm));
     }
 }
